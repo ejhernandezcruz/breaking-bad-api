@@ -23,6 +23,7 @@ Optionally you can use any IDE of  your preference
 
 | Library| Version |  
 |--|--|  
-|Rest Assured |  4.5.1|  
+|Rest Assured | 4.5.1|  
+|Gson | 2.9.0|  
 |TestNG | 7.4.0  |  
 |Lombok| 1.18.22|
