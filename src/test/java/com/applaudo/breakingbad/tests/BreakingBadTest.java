@@ -20,6 +20,7 @@ import static io.restassured.RestAssured.given;
 public class BreakingBadTest {
 
     private static final String BASE_URL = "https://www.breakingbadapi.com/api/characters/";
+    public static final String WALTER_WHITE_ID = "1";
     private RequestSpecification requestSpec;
 
     @BeforeClass
@@ -30,10 +31,9 @@ public class BreakingBadTest {
     }
 
     @Test(testName = "Get Walter White information")
-    @Parameters("WalterWhiteId")
-    public void walterWhiteTest(String id) {
+    public void walterWhiteTest() {
         Response response = given().spec(requestSpec)
-                .when().get(id)
+                .when().get(WALTER_WHITE_ID)
                 .then()
                 .assertThat().statusCode(HttpStatus.SC_OK)
                 .extract().response();
